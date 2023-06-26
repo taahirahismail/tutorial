@@ -7,9 +7,17 @@ export default createStore({
   },
   mutations: {
     setTutorials: (state, tutorials) => {
-      fetch("http://localhost:3000/tutorials")
-    }
+      state.tutorials = tutorials;
+    },
+    setTutorial: (state, tutorial) => {
+      state.tutorial = tutorial;
+    },
   },
   actions: {
+    getTutorials: async (context) => {
+      fetch("http://localhost:3000/tutorials")
+      .then((res) => res.json())
+      .then((tutorials) => context.commit("setTutorials", tutorials));
+    },
   }
 })

@@ -19,5 +19,10 @@ export default createStore({
       .then((res) => res.json())
       .then((tutorials) => context.commit("setTutorials", tutorials));
     },
-  }
+    getTutorial: async (context, id) => {
+      fetch("http://localhost:3000/tutorials/" + id)
+      .then((res) => res.json())
+      .then((tutorial) => context.commit("setTutorial", tutorial));
+    },
+  },
 })

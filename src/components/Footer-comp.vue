@@ -18,21 +18,27 @@ export default {
 <style scoped>
 .footer {
     position: fixed;
+    width: 100%;
     bottom: 0;
     left: 0;
     height: 90px;
     background-color: chocolate;
+    padding: 5px;
 }
 
 .footer-text-left {
-    font-size: 25px;
-    padding-left: 40px;
-    float: left;
-    word-spacing: 20px;
+    font-size: 10px;
+    word-spacing: 10px;
+}
+
+.menu {
+    padding: 5px;
+    color:darkslategrey;
+    text-decoration: none;
 }
 
 .menu:hover {
-    background-color: yellowgreen;
-    font-size: 20px;
+    color: green;
+    font-size: 12px;
 }
 </style>

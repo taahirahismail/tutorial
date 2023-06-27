@@ -1,8 +1,8 @@
 <template>
     <nav class="topnav">
-        <router-link class="active" to="/">Home</router-link>
-        <router-link to="/">Tutorials</router-link>
-        <router-link to="/">About</router-link>
+        <router-link class="active routerlink" to="/">Home</router-link>
+        <router-link class="routerlink" to="/tutorials">Tutorials</router-link>
+        <router-link class="routerlink" to="/about">About</router-link>
     </nav>
 </template>
 
@@ -18,12 +18,16 @@ export default {
     overflow: hidden;
 }
 
-router-link {
-    float: left;
+.routerlink {
+    float: center;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+}
+
+.routerlink:hover {
+    color: yellowgreen;
 }
 </style>

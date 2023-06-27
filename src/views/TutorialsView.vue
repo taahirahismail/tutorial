@@ -17,7 +17,7 @@ export default {
     },
 
     mounted() {
-        this.$store.dispatch("getProperties")
+        this.$store.dispatch("getTutorials")
     },
 
     components: { CardComp }
